@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38697b6f251744e6ab9f413c86eadb44" Name="Diagram1">
+        <EntityTypeShape EntityType="DataModel.CLIENTES" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.DETALLES_NOTAS" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.NOTAS_REPARACIONES" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.VEHICULOS" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="DataModel.FK_CLIENTES_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_NOTAS_REPARACIONES_NOTAS_REPARACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_VEHICULOS_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_DETALLES_NOTAS_NOTAS_REPARACIONES" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

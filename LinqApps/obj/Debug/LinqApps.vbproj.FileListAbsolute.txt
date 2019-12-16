@@ -1,0 +1,17 @@
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\LinqApps.exe.config
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\LinqApps.exe
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\LinqApps.pdb
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\LinqApps.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\EntityFramework.dll
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\EntityFramework.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.vbprojAssemblyReference.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.Form1.resources
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.Resources.resources
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.vbproj.GenerateResource.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.vbproj.CoreCompileInputs.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.vbproj.CopyComplete
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.exe
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\LinqApps\obj\Debug\LinqApps.pdb
