@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DAM_nikolayzabaleta_DEVModelStoreContainer" CdmEntityContainer="DBcontext">
+    <EntitySetMapping Name="Equipos">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Equipos">
+        <MappingFragment StoreEntitySet="Equipos">
+          <ScalarProperty Name="CodInstalacion" ColumnName="CodInstalacion" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="Velocidad" ColumnName="Velocidad" />
+          <ScalarProperty Name="CDROM" ColumnName="CDROM" />
+          <ScalarProperty Name="Memoria" ColumnName="Memoria" />
+          <ScalarProperty Name="TarjetaRed" ColumnName="TarjetaRed" />
+          <ScalarProperty Name="DiscoDuro" ColumnName="DiscoDuro" />
+          <ScalarProperty Name="Uso" ColumnName="Uso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instalaciones">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Instalaciones">
+        <MappingFragment StoreEntitySet="Instalaciones">
+          <ScalarProperty Name="CodInstalacion" ColumnName="CodInstalacion" />
+          <ScalarProperty Name="CodEquipo" ColumnName="CodEquipo" />
+          <ScalarProperty Name="CodSoftware" ColumnName="CodSoftware" />
+          <ScalarProperty Name="FechaInstalacion" ColumnName="FechaInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Software">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Software">
+        <MappingFragment StoreEntitySet="Software">
+          <ScalarProperty Name="CodSoftware" ColumnName="CodSoftware" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="MemoriaRequerida" ColumnName="MemoriaRequerida" />
+          <ScalarProperty Name="ProcesadorRequerido" ColumnName="ProcesadorRequerido" />
+          <ScalarProperty Name="DiscoRequerido" ColumnName="DiscoRequerido" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Distribuidor" ColumnName="Distribuidor" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="CodEquipo" ColumnName="CodEquipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

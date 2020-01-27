@@ -1,0 +1,17 @@
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.vbprojAssemblyReference.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.Form1.resources
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.Resources.resources
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.vbproj.GenerateResource.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.vbproj.CoreCompileInputs.cache
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\AppLinqMantenimiento.exe.config
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\AppLinqMantenimiento.exe
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\AppLinqMantenimiento.pdb
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\AppLinqMantenimiento.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\EntityFramework.dll
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\EntityFramework.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.vbproj.CopyComplete
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.exe
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.xml
+D:\Nikolay_Zabaleta\2.DESARROLLO_INTERFACES\actividades\LinqApps\AppLinqMantenimiento\obj\Debug\AppLinqMantenimiento.pdb

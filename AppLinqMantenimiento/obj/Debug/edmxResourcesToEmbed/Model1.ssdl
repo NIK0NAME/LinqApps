@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DAM_nikolayzabaleta_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Equipos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Equipos">
+    <Key>
+      <PropertyRef Name="Procesador" />
+      <PropertyRef Name="Memoria" />
+      <PropertyRef Name="DiscoDuro" />
+      <PropertyRef Name="Uso" />
+    </Key>
+    <Property Name="CodInstalacion" Type="nvarchar" MaxLength="4" />
+    <Property Name="Procesador" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Velocidad" Type="smallint" />
+    <Property Name="CDROM" Type="tinyint" />
+    <Property Name="Memoria" Type="smallint" Nullable="false" />
+    <Property Name="TarjetaRed" Type="nvarchar" MaxLength="15" />
+    <Property Name="DiscoDuro" Type="real" Nullable="false" />
+    <Property Name="Uso" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Instalaciones' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Instalaciones">
+    <Key>
+      <PropertyRef Name="CodEquipo" />
+      <PropertyRef Name="CodSoftware" />
+    </Key>
+    <Property Name="CodInstalacion" Type="nvarchar" MaxLength="4" />
+    <Property Name="CodEquipo" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="CodSoftware" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="FechaInstalacion" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Software' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Software">
+    <Key>
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Version" />
+      <PropertyRef Name="Distribuidor" />
+      <PropertyRef Name="Categoria" />
+    </Key>
+    <Property Name="CodSoftware" Type="nvarchar" MaxLength="4" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="MemoriaRequerida" Type="smallint" />
+    <Property Name="ProcesadorRequerido" Type="smallint" />
+    <Property Name="DiscoRequerido" Type="smallint" />
+    <Property Name="Version" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="Distribuidor" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Precio" Type="money" />
+    <Property Name="Categoria" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Usuarios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Apellido" />
+      <PropertyRef Name="Telefono" />
+      <PropertyRef Name="CodEquipo" />
+    </Key>
+    <Property Name="CodUsuario" Type="nvarchar" MaxLength="4" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="25" />
+    <Property Name="CodEquipo" Type="nvarchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DAM_nikolayzabaleta_DEVModelStoreContainer">
+    <EntitySet Name="Equipos" EntityType="Self.Equipos" store:Type="Tables" store:Schema="Mantenimiento">
+      <DefiningQuery>SELECT 
+    [Equipos].[CodInstalacion] AS [CodInstalacion], 
+    [Equipos].[Procesador] AS [Procesador], 
+    [Equipos].[Velocidad] AS [Velocidad], 
+    [Equipos].[CDROM] AS [CDROM], 
+    [Equipos].[Memoria] AS [Memoria], 
+    [Equipos].[TarjetaRed] AS [TarjetaRed], 
+    [Equipos].[DiscoDuro] AS [DiscoDuro], 
+    [Equipos].[Uso] AS [Uso]
+    FROM [Mantenimiento].[Equipos] AS [Equipos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Instalaciones" EntityType="Self.Instalaciones" store:Type="Tables" store:Schema="Mantenimiento">
+      <DefiningQuery>SELECT 
+    [Instalaciones].[CodInstalacion] AS [CodInstalacion], 
+    [Instalaciones].[CodEquipo] AS [CodEquipo], 
+    [Instalaciones].[CodSoftware] AS [CodSoftware], 
+    [Instalaciones].[FechaInstalacion] AS [FechaInstalacion]
+    FROM [Mantenimiento].[Instalaciones] AS [Instalaciones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Software" EntityType="Self.Software" store:Type="Tables" store:Schema="Mantenimiento">
+      <DefiningQuery>SELECT 
+    [Software].[CodSoftware] AS [CodSoftware], 
+    [Software].[Nombre] AS [Nombre], 
+    [Software].[MemoriaRequerida] AS [MemoriaRequerida], 
+    [Software].[ProcesadorRequerido] AS [ProcesadorRequerido], 
+    [Software].[DiscoRequerido] AS [DiscoRequerido], 
+    [Software].[Version] AS [Version], 
+    [Software].[Distribuidor] AS [Distribuidor], 
+    [Software].[Precio] AS [Precio], 
+    [Software].[Categoria] AS [Categoria]
+    FROM [Mantenimiento].[Software] AS [Software]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" store:Type="Tables" store:Schema="Mantenimiento">
+      <DefiningQuery>SELECT 
+    [Usuarios].[CodUsuario] AS [CodUsuario], 
+    [Usuarios].[Nombre] AS [Nombre], 
+    [Usuarios].[Apellido] AS [Apellido], 
+    [Usuarios].[Telefono] AS [Telefono], 
+    [Usuarios].[Direccion] AS [Direccion], 
+    [Usuarios].[CodEquipo] AS [CodEquipo]
+    FROM [Mantenimiento].[Usuarios] AS [Usuarios]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

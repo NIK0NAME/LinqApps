@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DAM_nikolayzabaleta_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Equipos">
+    <Key>
+      <PropertyRef Name="Procesador" />
+      <PropertyRef Name="Memoria" />
+      <PropertyRef Name="DiscoDuro" />
+      <PropertyRef Name="Uso" />
+    </Key>
+    <Property Name="CodInstalacion" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Procesador" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Velocidad" Type="Int16" />
+    <Property Name="CDROM" Type="Byte" />
+    <Property Name="Memoria" Type="Int16" Nullable="false" />
+    <Property Name="TarjetaRed" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DiscoDuro" Type="Single" Nullable="false" />
+    <Property Name="Uso" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Instalaciones">
+    <Key>
+      <PropertyRef Name="CodEquipo" />
+      <PropertyRef Name="CodSoftware" />
+    </Key>
+    <Property Name="CodInstalacion" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="CodEquipo" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CodSoftware" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaInstalacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Software">
+    <Key>
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Version" />
+      <PropertyRef Name="Distribuidor" />
+      <PropertyRef Name="Categoria" />
+    </Key>
+    <Property Name="CodSoftware" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MemoriaRequerida" Type="Int16" />
+    <Property Name="ProcesadorRequerido" Type="Int16" />
+    <Property Name="DiscoRequerido" Type="Int16" />
+    <Property Name="Version" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Distribuidor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Categoria" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Apellido" />
+      <PropertyRef Name="Telefono" />
+      <PropertyRef Name="CodEquipo" />
+    </Key>
+    <Property Name="CodUsuario" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CodEquipo" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBcontext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Equipos" EntityType="Self.Equipos" />
+    <EntitySet Name="Instalaciones" EntityType="Self.Instalaciones" />
+    <EntitySet Name="Software" EntityType="Self.Software" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+  </EntityContainer>
+</Schema>

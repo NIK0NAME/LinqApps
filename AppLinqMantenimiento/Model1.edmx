@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DAM_nikolayzabaleta_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Equipos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Equipos">
+          <Key>
+            <PropertyRef Name="Procesador" />
+            <PropertyRef Name="Memoria" />
+            <PropertyRef Name="DiscoDuro" />
+            <PropertyRef Name="Uso" />
+          </Key>
+          <Property Name="CodInstalacion" Type="nvarchar" MaxLength="4" />
+          <Property Name="Procesador" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Velocidad" Type="smallint" />
+          <Property Name="CDROM" Type="tinyint" />
+          <Property Name="Memoria" Type="smallint" Nullable="false" />
+          <Property Name="TarjetaRed" Type="nvarchar" MaxLength="15" />
+          <Property Name="DiscoDuro" Type="real" Nullable="false" />
+          <Property Name="Uso" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Instalaciones' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Instalaciones">
+          <Key>
+            <PropertyRef Name="CodEquipo" />
+            <PropertyRef Name="CodSoftware" />
+          </Key>
+          <Property Name="CodInstalacion" Type="nvarchar" MaxLength="4" />
+          <Property Name="CodEquipo" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="CodSoftware" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="FechaInstalacion" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Software' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Software">
+          <Key>
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Version" />
+            <PropertyRef Name="Distribuidor" />
+            <PropertyRef Name="Categoria" />
+          </Key>
+          <Property Name="CodSoftware" Type="nvarchar" MaxLength="4" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="MemoriaRequerida" Type="smallint" />
+          <Property Name="ProcesadorRequerido" Type="smallint" />
+          <Property Name="DiscoRequerido" Type="smallint" />
+          <Property Name="Version" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Distribuidor" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Precio" Type="money" />
+          <Property Name="Categoria" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DAM_nikolayzabaleta_DEV.Mantenimiento.Usuarios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Apellido" />
+            <PropertyRef Name="Telefono" />
+            <PropertyRef Name="CodEquipo" />
+          </Key>
+          <Property Name="CodUsuario" Type="nvarchar" MaxLength="4" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Apellido" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="25" />
+          <Property Name="CodEquipo" Type="nvarchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DAM_nikolayzabaleta_DEVModelStoreContainer">
+          <EntitySet Name="Equipos" EntityType="Self.Equipos" store:Type="Tables" store:Schema="Mantenimiento">
+            <DefiningQuery>SELECT 
+    [Equipos].[CodInstalacion] AS [CodInstalacion], 
+    [Equipos].[Procesador] AS [Procesador], 
+    [Equipos].[Velocidad] AS [Velocidad], 
+    [Equipos].[CDROM] AS [CDROM], 
+    [Equipos].[Memoria] AS [Memoria], 
+    [Equipos].[TarjetaRed] AS [TarjetaRed], 
+    [Equipos].[DiscoDuro] AS [DiscoDuro], 
+    [Equipos].[Uso] AS [Uso]
+    FROM [Mantenimiento].[Equipos] AS [Equipos]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Instalaciones" EntityType="Self.Instalaciones" store:Type="Tables" store:Schema="Mantenimiento">
+            <DefiningQuery>SELECT 
+    [Instalaciones].[CodInstalacion] AS [CodInstalacion], 
+    [Instalaciones].[CodEquipo] AS [CodEquipo], 
+    [Instalaciones].[CodSoftware] AS [CodSoftware], 
+    [Instalaciones].[FechaInstalacion] AS [FechaInstalacion]
+    FROM [Mantenimiento].[Instalaciones] AS [Instalaciones]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Software" EntityType="Self.Software" store:Type="Tables" store:Schema="Mantenimiento">
+            <DefiningQuery>SELECT 
+    [Software].[CodSoftware] AS [CodSoftware], 
+    [Software].[Nombre] AS [Nombre], 
+    [Software].[MemoriaRequerida] AS [MemoriaRequerida], 
+    [Software].[ProcesadorRequerido] AS [ProcesadorRequerido], 
+    [Software].[DiscoRequerido] AS [DiscoRequerido], 
+    [Software].[Version] AS [Version], 
+    [Software].[Distribuidor] AS [Distribuidor], 
+    [Software].[Precio] AS [Precio], 
+    [Software].[Categoria] AS [Categoria]
+    FROM [Mantenimiento].[Software] AS [Software]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" store:Type="Tables" store:Schema="Mantenimiento">
+            <DefiningQuery>SELECT 
+    [Usuarios].[CodUsuario] AS [CodUsuario], 
+    [Usuarios].[Nombre] AS [Nombre], 
+    [Usuarios].[Apellido] AS [Apellido], 
+    [Usuarios].[Telefono] AS [Telefono], 
+    [Usuarios].[Direccion] AS [Direccion], 
+    [Usuarios].[CodEquipo] AS [CodEquipo]
+    FROM [Mantenimiento].[Usuarios] AS [Usuarios]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DAM_nikolayzabaleta_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Equipos">
+          <Key>
+            <PropertyRef Name="Procesador" />
+            <PropertyRef Name="Memoria" />
+            <PropertyRef Name="DiscoDuro" />
+            <PropertyRef Name="Uso" />
+          </Key>
+          <Property Name="CodInstalacion" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Procesador" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Velocidad" Type="Int16" />
+          <Property Name="CDROM" Type="Byte" />
+          <Property Name="Memoria" Type="Int16" Nullable="false" />
+          <Property Name="TarjetaRed" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DiscoDuro" Type="Single" Nullable="false" />
+          <Property Name="Uso" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Instalaciones">
+          <Key>
+            <PropertyRef Name="CodEquipo" />
+            <PropertyRef Name="CodSoftware" />
+          </Key>
+          <Property Name="CodInstalacion" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="CodEquipo" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CodSoftware" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FechaInstalacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Software">
+          <Key>
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Version" />
+            <PropertyRef Name="Distribuidor" />
+            <PropertyRef Name="Categoria" />
+          </Key>
+          <Property Name="CodSoftware" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MemoriaRequerida" Type="Int16" />
+          <Property Name="ProcesadorRequerido" Type="Int16" />
+          <Property Name="DiscoRequerido" Type="Int16" />
+          <Property Name="Version" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Distribuidor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Categoria" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Apellido" />
+            <PropertyRef Name="Telefono" />
+            <PropertyRef Name="CodEquipo" />
+          </Key>
+          <Property Name="CodUsuario" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CodEquipo" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DBcontext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Equipos" EntityType="Self.Equipos" />
+          <EntitySet Name="Instalaciones" EntityType="Self.Instalaciones" />
+          <EntitySet Name="Software" EntityType="Self.Software" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DAM_nikolayzabaleta_DEVModelStoreContainer" CdmEntityContainer="DBcontext">
+          <EntitySetMapping Name="Equipos">
+            <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Equipos">
+              <MappingFragment StoreEntitySet="Equipos">
+                <ScalarProperty Name="CodInstalacion" ColumnName="CodInstalacion" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="Velocidad" ColumnName="Velocidad" />
+                <ScalarProperty Name="CDROM" ColumnName="CDROM" />
+                <ScalarProperty Name="Memoria" ColumnName="Memoria" />
+                <ScalarProperty Name="TarjetaRed" ColumnName="TarjetaRed" />
+                <ScalarProperty Name="DiscoDuro" ColumnName="DiscoDuro" />
+                <ScalarProperty Name="Uso" ColumnName="Uso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instalaciones">
+            <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Instalaciones">
+              <MappingFragment StoreEntitySet="Instalaciones">
+                <ScalarProperty Name="CodInstalacion" ColumnName="CodInstalacion" />
+                <ScalarProperty Name="CodEquipo" ColumnName="CodEquipo" />
+                <ScalarProperty Name="CodSoftware" ColumnName="CodSoftware" />
+                <ScalarProperty Name="FechaInstalacion" ColumnName="FechaInstalacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Software">
+            <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Software">
+              <MappingFragment StoreEntitySet="Software">
+                <ScalarProperty Name="CodSoftware" ColumnName="CodSoftware" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="MemoriaRequerida" ColumnName="MemoriaRequerida" />
+                <ScalarProperty Name="ProcesadorRequerido" ColumnName="ProcesadorRequerido" />
+                <ScalarProperty Name="DiscoRequerido" ColumnName="DiscoRequerido" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Distribuidor" ColumnName="Distribuidor" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="CodEquipo" ColumnName="CodEquipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
