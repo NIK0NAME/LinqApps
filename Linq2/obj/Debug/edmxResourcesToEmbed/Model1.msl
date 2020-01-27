@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DAM_nikolayzabaleta_DEVModelStoreContainer" CdmEntityContainer="DAM_nikolayzabaleta_DEVEntities">
+    <EntitySetMapping Name="Pilotos">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Pilotos">
+        <MappingFragment StoreEntitySet="Pilotos">
+          <ScalarProperty Name="CodPiloto" ColumnName="CodPiloto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="HorasVuelo" ColumnName="HorasVuelo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Reservas">
+        <MappingFragment StoreEntitySet="Reservas">
+          <ScalarProperty Name="CodReserva" ColumnName="CodReserva" />
+          <ScalarProperty Name="CodViaje" ColumnName="CodViaje" />
+          <ScalarProperty Name="CodViajero" ColumnName="CodViajero" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Viajeros">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Viajeros">
+        <MappingFragment StoreEntitySet="Viajeros">
+          <ScalarProperty Name="CodViajero" ColumnName="CodViajero" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Viajes">
+      <EntityTypeMapping TypeName="DAM_nikolayzabaleta_DEVModel.Viajes">
+        <MappingFragment StoreEntitySet="Viajes">
+          <ScalarProperty Name="CodViaje" ColumnName="CodViaje" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="PlazasMax" ColumnName="PlazasMax" />
+          <ScalarProperty Name="PlazasMin" ColumnName="PlazasMin" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaRegreso" ColumnName="FechaRegreso" />
+          <ScalarProperty Name="CodPiloto" ColumnName="CodPiloto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
